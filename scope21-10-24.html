@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope of variables In JS</title>
+</head>
+<body>
+    <h1>Scope of Variables In JS</h1>
+    <button onclick="anything()">Anything</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        var a = 45;
+        function anything(){
+            var b = 55.76;
+            document.getElementById("p1").innerHTML = a*b;
+        }
+        document.getElementById("p2").innerHTML = a+a;
+    </script>
+</body>
+</html>

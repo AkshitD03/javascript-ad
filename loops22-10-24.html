@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops In Js</title>
+</head>
+<body>
+    <h1>Loops In Js</h1>
+    <p id="p1"></p>
+    <script>
+        var company = ["Google(WHY ARE YOU USING IT)", "Bing(WHY ARE YOU USING IT)", "Exyser(Good Boy! Very Good)"];
+        var text = "";
+        var i;
+        for (i = 0; i<company.length; i++) {
+            text += company[i] + "<br>";
+        }
+        document.getElementById("p1").innerHTML = text;
+    </script>
+</body>
+</html>

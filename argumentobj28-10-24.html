@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argument Objects In JS</title>
+</head>
+<body>
+    <h1>Argument Objects In JS</h1>
+    <p id="p1"></p>
+    <script>
+        function findMin(){
+            var min = 9999999999999999999999999999999999999;
+            var i;
+            for (i = 0; i < arguments.length; i++) {
+              if (arguments[i] < min) {
+                min = arguments[i];
+              }
+            }
+            return min;
+        }
+        document.getElementById("p1").innerHTML = findMin(10, 20, 3, 8, 6, 26);
+    </script>
+</body>
+</html>

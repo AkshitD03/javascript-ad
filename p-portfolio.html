@@ -7,20 +7,72 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ol {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ol li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ol li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ol li a:hover {
+            color: #ddd;
+        }
+        #section2{
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid blue;
+            box-shadow: black 10px 10px 10px ;
+        }
+        #section2 input {
+        margin: 5px;
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    #section2 button {
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin: 5px;
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    #section2 button:hover {
+        background-color: rgb(0, 0, 88);
+    }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <ol>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My Projects</a></li>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">My Projects</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">About</a></li>
             </ol>
         </nav>
     </header>
     <section id="section1">
-        <h2>Welcome to My Portfolio</h2>
         <div class="container">
             <h1>Slider mycarousel</h1>
             <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -43,6 +95,7 @@
             </div>
             </div>
     </section>
+    <br><br><br><br><br>
     <section id="section2">
         <h2>My Projects -</h2>
         <p>CALCULATOR</p>
@@ -57,6 +110,68 @@
               var result = num1 * num2;
               document.getElementById("p1").innerHTML = result;
             }
+        </script>
+        <br><br><br>
+        <p>DATE - </p>
+        <p id="resd"></p>
+        <p id="rday"></p>
+        <br><br><br>
+        <p>RANNDOM NUMBER - </p>
+        <p id="rnum"></p>
+        <br><br><br>
+        <p>GET THE SUM OF THESE NUMBERS -</p>
+        <p id="sumres"></p>
+        <br>
+        <p>And </p>
+        <p>Sin of 10 =</p>
+        <p id="sin"></p>
+        <p>Cos of 10 =</p>
+        <p id="cos"></p>
+        <p>Tan of 10 =</p>
+        <p id="tan"></p>
+        <script>
+            var date = new Date(); 
+            document.getElementById("resd").innerHTML = date.getDate();
+            var randdome = Math.floor(Math.random()*10);
+            document.getElementById("rnum").innerHTML = randdome;
+            var day;
+            switch (new Date().getDay()){
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+                    break;
+            }
+            document.getElementById("rday").innerHTML = day;
+
+        var num1 =  10;
+        var num2 =  13;
+        var num3 =  15;
+        var num4 =  17;
+         function sum() {
+            var sum = num1 + num2 + num3 + num4;
+            return sum;
+         }
+         document.getElementById("sumres").innerHTML = sum(num1, num2, num3, num4);
+         document.getElementById("sin").innerHTML = Math.sin(num1)
+         document.getElementById("cos").innerHTML = Math.cos(num1)
+         document.getElementById("tan").innerHTML = Math.tan(num1)
         </script>
     </section>
 </body>
